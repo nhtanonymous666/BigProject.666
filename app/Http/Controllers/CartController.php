@@ -31,7 +31,7 @@ class CartController extends Controller
             if (Auth::check()) {
             	$user_id = Auth::user()->user_id;
                 $numListCartHeader = $this->cart->numListCart($user_id);
-                $ListCartHeader = $this->cart->listCart($user_id)->take(6)->get();
+                $ListCartHeader = $this->cart->listCart($user_id)->take(4)->get();
             } else {
                 $numListCartHeader = '0';
                 $ListCartHeader = 'Vui lòng đăng nhập';
